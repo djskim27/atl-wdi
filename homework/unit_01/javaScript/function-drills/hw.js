@@ -12,6 +12,14 @@
 // Edge Case: If the array is empty, return 0
 var sumOfNums = function(numsArray){
   // Your Code Here
+  if (numsArray.length > 0) {
+     return numsArray.reduce(function(a,b) {
+    return a + b
+  });
+  } else {
+     return 0;
+}
+  
 };
 
 // #2
