@@ -109,6 +109,7 @@ var anyStartingWithB = function(words){
 // Edge Case: If `n` is less than zero, return `null`.
 var hasAtLeastNVowels = function(word, n){
   // Your Code Here
+  // found .match(/[aeiou]|[AEIOU]/g) from google search *I do not understand concept*
  if (n < 0) {
    return null;
  }
@@ -139,6 +140,7 @@ return newArray;
 // Edge Case: If the array is empty, the function should return `true`.
 var allHaveAtLeastTwoVowels = function(words){
   // Your Code Here
+  
   for (var i=0; i<words.length; i++) {
     if ((words[i].match(/[aeiou]|[AEIOU]/g).length) < 2) {
     return false;
@@ -187,6 +189,9 @@ return true;
 //      return { cat: 3, horse: 5, elephant: 8}
 var buildObjectFromWords = function(words){
   // Your Code Here
+  //I DO NOT UNDERSTAND THIS SOLUTION
+  //I understand making the empty obj but the process of filling object
+  //with words from array doesn't make sense to me
   var newObj ={};
   for (var i=0; i<words.length; i++){
     newObj[words[i]] = words[i].length;
