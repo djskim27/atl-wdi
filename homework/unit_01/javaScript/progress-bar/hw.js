@@ -17,6 +17,7 @@ var timerUI = {
     
     
     document.getElementsByClassName('progress-bar')[0].style.width = (100 - timerValue) + '%';
+    document.getElementsByClassName('progress-bar')[1].style.width = (100 - timerValue) + '%';
   },
   drawLitFuses: function(timerValue){
     // Your Code Here

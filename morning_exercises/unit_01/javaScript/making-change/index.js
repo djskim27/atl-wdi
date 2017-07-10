@@ -6,6 +6,29 @@
 
 var makeChange = function(price, payment) {
   // Your Code Here
+  //Identify Change
+   price = price * 100;
+   payment = payment *100;
+   var change = Math.floor(payment - price);
+
+   if (change <= 0) {
+     return [0, 0, 0, 0];
+   }
+   var quarters = Math.floor(change/25);
+   change = change % 25;
+
+   var dimes = Math.floor(change/10);
+   change = change % 10;
+
+   var nickles = Math.floor(change/5);
+   change = change % 5;
+
+   var pennies = Math.floor(change/1);
+  
+  var coins = [quarters, dimes, nickles, pennies];
+
+  return coins
+
 };
 
 /// DO NOT EDIT BELOW THIS LINE ///

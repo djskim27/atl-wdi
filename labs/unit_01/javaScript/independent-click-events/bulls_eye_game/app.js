@@ -23,6 +23,8 @@ window.onload = function() {
 
   body.addEventListener('click', bullseyeGame.miss);
   ring1.addEventListener('click', bullseyeGame.outerRing)
+  ring2.addEventListener('click', bullseyeGame.middleRing)
+  ring3.addEventListener('click', bullseyeGame.bullseye)
 }
 
 
@@ -39,6 +41,7 @@ var bullseyeGame = {
   miss: function(event) {
     event.stopPropagation();
     alert('YOU MISSED');
+    event.target.style.backgroundColor = "yellow";
 
     bullseyeGame.updateScore(0);
     // [ALERT:] needs to be bullseyeGame because this in clickEvents refers to the html element that was clicked
@@ -46,6 +49,27 @@ var bullseyeGame = {
 
   outerRing: function(event) {
     event.stopPropagation();
-    alert('outerRing was clicked')
-  }
+    bullseyeGame.updateScore(10);
+    alert('outerRing was clicked');
+    event.target.style.backgroundColor = "green";
+    setTimeout(function() {
+        event.target.style.backgroundColor = "red";
+    }, 2000)
+  
+    
+  },
+
+  middleRing: function(event) {
+    event.stopPropagation();
+    bullseyeGame.updateScore(50);
+    alert('middleRing was clicked')
+  }, 
+
+  bullseye: function(event) {
+    event.stopPropagation();
+    bullseyeGame.updateScore(100);
+    alert('BULLSEYE BITCH')
+  },
+
+  
 }
