@@ -1,4 +1,4 @@
-# Unit Spec : `Stopwatch`
+<!--# Unit Spec : `Stopwatch`-->
 
 ## `tickClock`
 
