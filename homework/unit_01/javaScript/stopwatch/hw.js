@@ -1,6 +1,7 @@
 // General Assembly, WDI (Web Development Immersive) Remote, Cohort 02 (R2D2)
 // Copyright (C) 2016 Matt Brendzel under the GNU General Public License.
 // See LICENSE for details.
+$(function(){
 
 /// Data & Core Business Logic ///
 const Stopwatch = {
@@ -83,7 +84,7 @@ const ViewEngine = {
     //displays the values of minutes, seconds, and (tens of) milliseconds elapsed in the DOM element with id 'time-display'
     $('#mins').html(ViewHelpers.zeroFill(mins, 2));
     $('#secs').html(ViewHelpers.zeroFill(secs, 2));
-    $('#millisecs').html(ViewHelpers.zeroFill(millisecs, 3));
+    $('#millisecs').html(ViewHelpers.zeroFill(millisecs/10, 2));
     
   },
   updateLapListDisplay: function(laps){
@@ -149,11 +150,15 @@ const AppController = {
   }
 };
 
-window.onload = function(){
-  // Attach AppController methods to the DOM as event handlers here.
 
+  //Add clickable events
+function addEventHandlers() {
+//start timer
 $('#start').on('click',
   AppController.handleClickStart);
+//stop time 'first click'; reset time 'second click'
 $('#stop').on('click', AppController.handleClickStopReset);
-
 };
+//call function for events
+addEventHandlers();
+});
