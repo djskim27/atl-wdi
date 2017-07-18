@@ -105,7 +105,7 @@ const AppController = {
       Stopwatch.stop();
     } else {
       Stopwatch.reset();
-      ViewEngine.updateTimeDisplay(0, 0, 0);
+      ViewEngine.updateTimeDisplay(00, 00, 00);
       ViewEngine.updateLapListDisplay(Stopwatch.laps);
     }
   }

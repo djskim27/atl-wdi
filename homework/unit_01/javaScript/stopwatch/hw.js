@@ -45,6 +45,7 @@ const Stopwatch = {
     
     //it resets the list of laps to be empty
     this.laps = [];
+    
   },
   start: function(){
   // if the stopwatch is not running
@@ -70,8 +71,13 @@ const Stopwatch = {
   lap: function(){
     // if the stopwatch is running
     if (this.isRunning === true) {
-      //it adds a record of the current values of minuts ('min'), seconds
+      //it adds a record of the current values of minutes ('min'), seconds, milliseconds
+      this.laps.push({
+        mins: this.mins,
+        secs: this.secs,
+        millisecs: this.millisecs
 
+      })
     }
     //if the stopwatch is not running
       //it does nothing
@@ -89,6 +95,17 @@ const ViewEngine = {
   },
   updateLapListDisplay: function(laps){
     // Your Code Here
+    var laps = Stopwatch.laps;
+    
+    var $lapList = $('#lap-list');
+
+    $lapList.html('');
+
+    for (var i = 0; i<laps.length; i++){
+      $lapList.append('<li>'+ ViewHelpers.zeroFill(laps[i].mins, 2) + ':'+
+        ViewHelpers.zeroFill(laps[i].secs, 2) + ":" +
+        ViewHelpers.zeroFill(laps[i].millisecs/10, 2) + '</li>');
+    }
   },
 };
 const ViewHelpers = {
@@ -147,6 +164,11 @@ const AppController = {
   },
   handleClickLap: function(){
     // Your Code Here
+      if (Stopwatch.isRunning) {
+      Stopwatch.lap();
+      ViewEngine.updateLapListDisplay(Stopwatch.laps);
+      
+    }
   }
 };
 
@@ -158,7 +180,11 @@ $('#start').on('click',
   AppController.handleClickStart);
 //stop time 'first click'; reset time 'second click'
 $('#stop').on('click', AppController.handleClickStopReset);
+//lap
+$('#lap').on('click', AppController.handleClickLap);
 };
 //call function for events
 addEventHandlers();
 });
+
+
