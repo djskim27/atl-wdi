@@ -1,6 +1,15 @@
 const express = require('express');
+const hbs = require('hbs');
+
 const app = express();
-var port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
+
+app.set('view engine', 'hbs');
+app.set('views', './views')
+
+app.use(express.static(__dirname + '/public'));
+
+
 
 app.get('/', (req, res) => {
 
@@ -8,18 +17,12 @@ app.get('/', (req, res) => {
 
 });
 
-app.get('/topping', (req, res, next) => {
+const toppingController = require('./controllers/topping_controller');
+app.use('/topping', toppingController);
 
-    res.send(`${req.query.topping} pizza!`);
+const amountController = require('./controllers/amountAndSize_controller');
+app.use('/order', amountController);
 
-})
-
-app.get('/order/:amount/:size', (req, res, next) => {
-
-    res.send(`Your order for ${req.params.amount} ${req.params.size} pizzas will be ready in 1 minute!`);
-
-
-})
 
 app.listen(port, function(){
   console.log("==========================")
