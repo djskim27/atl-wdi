@@ -7,34 +7,41 @@ var hbs         = require('hbs');
 var app         = express();
 var port        = process.env.PORT || 3000;
 /* set up the application params*/
-
+const todosController = require('./controller/todos');
+const bodyParser = require('body-parser');
 // log
 app.use( logger('dev'));
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
 
 /*Views*/
 app.set('view engine', 'hbs');
+
+
 
 /* HOME */
 app.get('/', function(req,res) {
   res.send('This is our Home Page');
 });
 
-/* INDEX TODOS */
-app.get('/todos', function(req,res) {
-  var seededTodos = [
-    {
-      description: "get beer",
-      urgent: true
-    }, {
-      description: "dry cleaning",
-      urgent: false
-    }
-  ];
+app.use('/todos', todosController);
+// /* INDEX TODOS */
+// app.get('/todos', function(req,res) {
+//   var seededTodos = [
+//     {
+//       description: "get beer",
+//       urgent: true
+//     }, {
+//       description: "dry cleaning",
+//       urgent: false
+//     }
+//   ];
 
-  res.render('todos/index', {
-    todos: seededTodos
-  });
-});
+//   res.render('todos/index', {
+//     todos: seededTodos
+//   });
+// });
 
 // Start server
 app.listen(port, function() {
