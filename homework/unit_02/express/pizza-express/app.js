@@ -19,6 +19,11 @@ app.get('/', (req, res) => {
 
 });
 
+app.get('*', (req, res) => {
+
+    res.send('FUCK YOU IM NOT HERE');
+
+});
 const toppingController = require('./controllers/topping_controller');
 app.use('/topping', toppingController);
 
