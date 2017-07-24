@@ -55,8 +55,8 @@ router.put('/:id', (req,res) => {
     updatedPirate.death_year = req.body.death_year;
     updatedPirate.base = req.body.base;
     updatedPirate.nickname = req.body.nickname;
-    
-    res.redirect(`/pirates/${id}`);
+    res.method = "GET"
+    res.redirect(`/pirates/${req.params.id}`);
 });
 
 //create route
