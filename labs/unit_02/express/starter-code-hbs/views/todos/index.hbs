@@ -4,6 +4,14 @@
   {{#each todos}}
     <li>Description: <a href="/todos/{{@index}}">{{description}}</a></li>
     <li>Urgent: {{urgent}}</li>
+    <form method="POST" action="/todos/{{@index}}?_method=DELETE">
+    <button>DELETE</button>
+
+    </form>
+    <div><a href="/todos/{{@index}}/edit">Edit</a></div>
+    <form action="/todos/{{@index}}">
+    
+    </form>
     <br>
   {{/each}}
 </ul>

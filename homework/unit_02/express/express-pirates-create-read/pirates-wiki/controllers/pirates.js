@@ -45,4 +45,11 @@ router.post('/', (req,res) => {
    res.redirect("/pirates");
 })
 
+//delete route
+router.delete('/:id', (req,res) => {
+    pirates.splice(req.params.id, 1);
+
+    res.redirect('/pirates');
+});
+
 module.exports = router;

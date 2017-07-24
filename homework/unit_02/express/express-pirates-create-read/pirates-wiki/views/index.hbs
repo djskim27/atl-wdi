@@ -2,7 +2,11 @@
   {{#each pirates}}
     <li><a href="pirates/{{ @index }}">{{ name }}</a></li>
     <br>
+    <form action="/pirates/{{@index}}?_method=DELETE" method="POST">
+      <input type="submit" value="DELETE"/>
+    </form>
   {{/each}}
 </ul>
+
 
 <a href = '/pirates/new'>Create a new pirate</a>
