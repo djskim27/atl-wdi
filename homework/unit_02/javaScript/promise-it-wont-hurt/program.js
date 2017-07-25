@@ -29,9 +29,9 @@ var promise = new Promise(function (fulfill, reject) {
 
 function onReject(error) {
     // Your solution here
-    console.log(Error.message);
+    console.log(error.message);
 }
 
-console.log(Error.message)
+
 // Your solution here
 promise.then(null, onReject);
