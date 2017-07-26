@@ -32,6 +32,15 @@ This app provides easy access to all your e-mail service providers in one app. T
 ```
 Write your answer here or in a separate js file.
 ```
+var user = {
+  name: 'David Kim',
+  email: 'Sparky@gmail.com'
+  email-provider: 'gmail'
+}
+
+var gmail = {
+  users = []
+}
 
 ### 2. Radio on the Internet app
 
@@ -41,6 +50,18 @@ This app hosts a ton of radio stations, each featuring their own playlists of so
 ```
 Write your answer here or in a separate js file.
 ```
+var radioStation107 = {
+  radioStationId: 217,
+  location: "LITTLE PONY, IOWA",
+  playlist: [];
+}
+
+var user = {
+  name: "David Kim",
+  username: "TheAznKid",
+  radioStationPreference: [];
+  playlists: [];
+}
 
 ### 3. Rock Concert App
 
@@ -50,9 +71,33 @@ This app will be a tool for managing all of your favorite bands' concerts; it wi
 Write your answer here or in a separate js file.
 ```
 
+var exampleBand = {
+  bandName: "Backstreet Boys",
+  concertLocation: [],
+  concertDate: [],
+}
+
+var user = {
+  name: "David Kim",
+  ticketsBought: "Backstreet Boys"
+}
 ### 4. Coffee To-Go App
 
 This app will allow customers to browse a list of coffeeshops nearby, order drinks off of their menu, add those drinks to a shopping cart, and save that cart as a past order once the purchase is complete.
+
+var user = {
+  name: "David Kim",
+  paymentInfo: [];
+  coffeeShop: "Starbucks - Suwanee"
+  cart: "grande caramel macchiato"
+}
+
+var StarbucksSuwanee = {
+  location: "Suwanee";
+  menu: [];
+  customers: "David Kim";
+}
+
 
 ### 5. Team Tracker App
 
@@ -61,6 +106,17 @@ This app shows you all the latest stats from your favorite sports teams. You can
 ```
 Write your answer here or in a separate js file.
 ```
+var Carmelo Anthony = {
+  name: "Carmelo Anthony",
+  team: "New York Knicks",
+  personal-stats: [],
+}
+
+var newYorkKnicks = {
+  players: ["Carmelo Anthony"],
+  teamStats: [],
+  winLossRatio: value
+  ]
 
 
 ### Final Thoughts:
@@ -70,7 +126,7 @@ Q. When you were creating relationships between the models, what were some thoug
 ```
 Write your answer here or in a separate js file.
 ```
-
+The number one question I asked myself was: how can I include each object within each other? 
 ### Reading and Videos for Tomorrow
 Now that you've had some practice really thinking about the data design of an app, we're going to learn about MongoDB, a no-SQL database. Starting tomorrow, our Express apps will be talking to the Mongo database through Mongoose. Since we're covering a LOT of ground tomorrow, take some time to introduce yourself to concepts and lingo surrounding MongoDB and Mongoose. You will _not_ have to memorize the technical details here.
 
