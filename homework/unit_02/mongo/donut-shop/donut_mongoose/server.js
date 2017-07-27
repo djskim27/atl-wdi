@@ -29,10 +29,10 @@ app.use( logger('dev'));
 // CONTROLLERS
 //======================
 //for seed file, seed the database
-// var seedController = require('./controllers/seeds.js');
-// app.use('/seed', seedController);
+var seedController = require('./controllers/seeds.js');
+app.use('/seed', seedController);
 
-// //for root directory, show all donuts
+//for root directory, show all donuts
 // var donutsController = require('./controllers/donuts.js');
 // app.use('/', donutsController);
 
@@ -40,6 +40,7 @@ app.use( logger('dev'));
 // LISTENERS
 //======================
 //CONNECT MONGOOSE TO "donut_store"
+
 mongoose.connect('mongodb://localhost/donut_mongoose')
 
 //CREATE THE MONGOOSE CONNECTION and SET APP TO LISTEN to 3000
