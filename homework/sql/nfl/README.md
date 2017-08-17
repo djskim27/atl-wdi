@@ -149,7 +149,7 @@ SELECT SUM(salary) FROM players WHERE team_id = 18;
 
 
 
-SELECT name FROM players ORDER BY salary ASC LIMIT 1;
+SELECT name FROM players ORDER BY salary ASC  WHERE team_id = 23 LIMIT 1;
 
 
 
