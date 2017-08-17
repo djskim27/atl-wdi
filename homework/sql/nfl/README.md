@@ -44,16 +44,27 @@ not cover in class.
 
     SELECT COUNT(name) FROM players;
     1532 players
-    
+
 <hr>
 &#x1F534; COMMIT 2<br>
 "Commit: NFL - queried some NFL stuff"
 <hr>
 
 5.  The team names and head coaches of the NFC North and AFC East
+
+SELECT name, head_coach FROM teams WHERE conference = 'NFC' AND division = 'North' OR conference = 'AFC' AND division = 'East';
+
 6.  The 50 players with the highest salaries
+
+SELECT * FROM players ORDER BY salary DESC LIMIT 50;
+
 7.  The average salary of all NFL players
+
+SELECT AVG(salary) FROM players;
+
 8.  The names and positions of players with a salary above 10_000_000
+
+SELECT name, position FROM players WHERE salary > 10000000;
 
 <hr>
 &#x1F534; COMMIT 3<br>
