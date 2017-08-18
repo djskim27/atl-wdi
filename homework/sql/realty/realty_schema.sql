@@ -11,7 +11,7 @@ CREATE TABLE apartments(
 );
 
 CREATE TABLE offices(
-    id SERIAL PRIMARY KEY.
+    id SERIAL PRIMARY KEY,
     office_num NUMERIC,
     num_floors NUMERIC,
     sq_ft NUMERIC,
