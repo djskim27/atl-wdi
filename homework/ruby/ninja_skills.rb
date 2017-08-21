@@ -59,5 +59,14 @@ likeToDo = gets.chomp
 
 puts "#{name} likes to #{likeToDo}"
 
+#Challenge 6
+myFirstArray = []
+myFirstArray = ['a','b','c','d','e',1,2,3,4]
+puts myFirstArray.last
+puts myFirstArray.first
+myFirstArray[1] = "Joe"
+myFirstArray[2] = 3
+myFirstArray.push(true)
+puts myFirstArray[3].class
 
 
