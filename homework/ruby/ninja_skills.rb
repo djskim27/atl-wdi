@@ -47,4 +47,17 @@ gToNumber = 2
 
 puts g.to_i + gToNumber
 
+#Challenge 5
+integer = gets.chomp.to_i
+puts integer * 2
+
+puts "What is your name?"
+name = gets.chomp
+
+puts "What do you like to do?"
+likeToDo = gets.chomp
+
+puts "#{name} likes to #{likeToDo}"
+
+
 
