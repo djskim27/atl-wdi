@@ -99,14 +99,21 @@ Please answer the following questions in the spaces provided.
 1.  How do you write an `if` statement in Ruby?
 
   ```ruby
-    # your answer here
+    
+    num = 20
+
+    if num = 20
+      puts 'Howdy'
+    end
   ```
 
 2.  Please write code that would take the string "007", reverse it,
     and return the integer `700`.
 
   ```ruby
-    # your answer here
+    string = '007'
+    string.reverse!
+    puts string
   ```
 
 3.  Please write code that takes the array `[23,56,3,7]`, sorts it,
@@ -114,37 +121,48 @@ Please answer the following questions in the spaces provided.
     (i.e. modifying the original array, rather than returning a new array).
 
   ```ruby
-    # your answer here
+   a = [25, 56, 3, 7]
+   a.sort! { |x,y| y <=> x }
+   puts a
   ```
 
 3.  What does an exclamation point at the end of a method name usually signify?
 
   ```text
-    Your answer here:
+    Methods that end in ! indicate that the method modify the object it's called on.
   ```
 
 4.  What does a question mark and the end of a method name usually signify?
 
   ```text
-    Your answer here:
+    Indicates that a method should return a boolean value
   ```
 
 5.  How do you define a method in Ruby? Give a simple example.
 
   ```ruby
-    # your answer here
+    def hello
+      'Hello World'
+    end
   ```
 
 6.  How do you create a class in Ruby? Give a simple example.
 
   ```ruby
-    # your answer here
+    class Dude
+    # whatever code
+    end
   ```
 
 7. Please give an example of how iteration can be performed in Ruby.
 
   ```ruby
-    # your answer here
+    fruits = ['apples', 'oranges', 'pears']
+
+    fruits.each do |fruit|
+      puts "#{fruit}"
+    end
+
   ```
 
 8.  If I modify a class in Ruby by adding a method, will instances of that class
