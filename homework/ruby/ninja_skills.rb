@@ -11,10 +11,23 @@ puts a = !b
 
 c = NIL
 
-puts c 
+p c 
 
 puts "#{c} nil was here"
 
 print c
 
 puts c.class
+
+# Challenge 3
+d = 10
+
+puts d
+
+e = 10.1
+
+puts e
+
+d = e
+
+puts d
