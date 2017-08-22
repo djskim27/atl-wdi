@@ -1,87 +1,87 @@
-# # Challenge 1
-# a = true
+# Challenge 1
+a = true
 
-# b = false
+b = false
 
-# puts a = b
+puts a = b
 
-# puts a = !b
+puts a = !b
 
-# # Challenge 2
+# Challenge 2
 
-# c = NIL
+c = NIL
 
-# p c 
+p c 
 
-# puts "#{c} nil was here"
+puts "#{c} nil was here"
 
-# print c
+print c
 
-# puts c.class
+puts c.class
 
-# # Challenge 3
-# d = 10
+# Challenge 3
+d = 10
 
-# puts d
+puts d
 
-# e = 10.1
+e = 10.1
 
-# puts e
+puts e
 
-# d = e
+d = e
 
-# puts d
+puts d
 
-# # Challenge 4
+# Challenge 4
 
-# christine = "Hi, I'm Christine"
-# likesTo = "long walks on the beach, kinda. "
+christine = "Hi, I'm Christine"
+likesTo = "long walks on the beach, kinda. "
 
-# tims = christine
+tims = christine
 
-# puts "#{tims} and I like #{likesTo}"
+puts "#{tims} and I like #{likesTo}"
 
-# g = "2"
+g = "2"
 
-# gToNumber = 2
+gToNumber = 2
 
-# puts g.to_i + gToNumber
+puts g.to_i + gToNumber
 
-# #Challenge 5
-# integer = gets.chomp.to_i
-# puts integer * 2
+#Challenge 5
+integer = gets.chomp.to_i
+puts integer * 2
 
-# puts "What is your name?"
-# name = gets.chomp
+puts "What is your name?"
+name = gets.chomp
 
-# puts "What do you like to do?"
-# likeToDo = gets.chomp
+puts "What do you like to do?"
+likeToDo = gets.chomp
 
-# puts "#{name} likes to #{likeToDo}"
+puts "#{name} likes to #{likeToDo}"
 
-# #Challenge 6
-# myFirstArray = []
-# myFirstArray = ['a','b','c','d','e',1,2,3,4]
-# puts myFirstArray.last
-# puts myFirstArray.first
-# myFirstArray[1] = "Joe"
-# myFirstArray[2] = 3
-# myFirstArray.push(true)
-# puts myFirstArray[3].class
+#Challenge 6
+myFirstArray = []
+myFirstArray = ['a','b','c','d','e',1,2,3,4]
+puts myFirstArray.last
+puts myFirstArray.first
+myFirstArray[1] = "Joe"
+myFirstArray[2] = 3
+myFirstArray.push(true)
+puts myFirstArray[3].class
 
-# #Challenge 7
-# myFavoriteAnimals = {
-#     "Shark": "Fish",
-#     "Kangaroo": "Mammal",
-#     "Ant": "Insect",
-#     "Eagle": "Bird",
-#     "Edgar": "Beast"
-# }
+#Challenge 7
+myFavoriteAnimals = {
+    "Shark": "Fish",
+    "Kangaroo": "Mammal",
+    "Ant": "Insect",
+    "Eagle": "Bird",
+    "Edgar": "Beast"
+}
 
-# myFavoriteAnimals[:"Edgar"] ="Bear"
+myFavoriteAnimals[:"Edgar"] ="Bear"
 
-# favoriteMovie = {}
-# favoriteMovie[:"movie"] = "Home Alone"
+favoriteMovie = {}
+favoriteMovie[:"movie"] = "Home Alone"
 
 #Challenge 8
 firstRange = (1..10).to_a
