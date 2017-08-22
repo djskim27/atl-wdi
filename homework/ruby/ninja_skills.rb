@@ -69,19 +69,46 @@
 # myFirstArray.push(true)
 # puts myFirstArray[3].class
 
-#Challenge 7
-myFavoriteAnimals = {
-    "Shark": "Fish",
-    "Kangaroo": "Mammal",
-    "Ant": "Insect",
-    "Eagle": "Bird",
-    "Edgar": "Beast"
-}
+# #Challenge 7
+# myFavoriteAnimals = {
+#     "Shark": "Fish",
+#     "Kangaroo": "Mammal",
+#     "Ant": "Insect",
+#     "Eagle": "Bird",
+#     "Edgar": "Beast"
+# }
 
-myFavoriteAnimals[:"Edgar"] ="Bear"
+# myFavoriteAnimals[:"Edgar"] ="Bear"
 
-favoriteMovie = {}
-favoriteMovie[:"movie"] = "Home Alone"
+# favoriteMovie = {}
+# favoriteMovie[:"movie"] = "Home Alone"
+
+#Challenge 8
+firstRange = (1..10).to_a
+secondRange = (1...1000).to_a
+
+for number in firstRange do
+    p number.to_s
+end
+
+x = 0
+while x < 50
+    puts secondRange[x]
+    x += 1
+end
+
+newFirstRange = firstRange.each_index{|x| puts firstRange[x+2] * 2}
+
+
+newFirstRange2 = firstRange.map do |value|
+    if value.odd? == true 
+        p value.to_s
+    else 
+        p value
+        end
+    end
+ 
+
 
 
 
